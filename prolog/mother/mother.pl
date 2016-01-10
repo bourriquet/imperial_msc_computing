@@ -123,8 +123,10 @@ findElement(+N, +L, E) :-
     E is the Nth element in list L
 */
 
+% 1st element in the list, or has been recursed here
 findElement(1, [E|T], E).
 
+% recursive, find N-1th element of the tail
 findElement(N, [H|T], E) :-
     N > 1,
     length(T, X),

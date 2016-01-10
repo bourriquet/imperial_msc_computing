@@ -77,7 +77,7 @@ followed_by(X, Y, List) :-
 
 /*
 noun_phrase_better(NPB) :-
-   improves on noun_phrase(NP) so that the article matches
+   improves on noun_phrase/1 so that the article matches
    the noun in noun phrases (in terms of first vowel of the noun)
 
 
@@ -104,4 +104,143 @@ atoms([H|_], W) :-
 
 first_vowel([H|T]) :-
     member(H, [a,e,i,o,u]).
-    
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 3a,b             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+/*
+cadvs(L) :-
+    L is a conjuction of adverbs
+
+    accumulator version loops infinitely (need to put check on 4 adverbs)
+*/   
+
+%list of 1 adverb
+cadvs(List) :-
+    adverb(List).
+
+%list of 2 adverbs
+cadvs(List) :-
+    adverb(A),
+    addAnd(A, List),
+    checkReps(List).
+
+%list of 3 adverbs
+cadvs(List) :-
+    adverb(A),
+    addAnd(A, A2),
+    addComma(A2, List),
+    checkReps(List).
+
+%list of 4 adverbs
+cadvs(List) :-
+    adverb(A),
+    addAnd(A, A2),
+    addComma(A2, A3),
+    addComma(A3, List),
+    checkReps(List).
+
+
+addAnd(List, NewList) :-
+    adverb(X),
+    append([and], List, NewList2),
+    append(X, NewList2, NewList).
+
+addComma(List, NewList) :-
+    adverb(X),
+    append([','], List, NewList2),
+    append(X, NewList2, NewList).
+
+checkReps(List) :-
+    setof(X, (member(X, List), X \= ',', X \= and), Set),
+    findall(X, (member(X, List), X \= ',', X \= and), All),
+    length(Set, L),
+    length(All, L).
+
+
+
+/*
+cadvs(L) :-
+    cadvs([], L).
+
+cadvs(L,L) :-
+    L \= [].
+
+% accumulator is empty, so add an adverb
+cadvs(X, L) :-
+    length(X,0),
+    adverb(A),
+    append(A, X, X2),
+    cadvs(X2, L).
+
+% accumulator has only 1 sentence (and is not a member)
+cadvs(X, L) :-
+    length(L,Y),
+    Y > 0,
+    nonmember(and, X),
+    adverb([A]),
+    nonmember(A, X),
+    append([A], [and], X2),
+    append(X2, X, X3),
+    cadvs(X3, L).
+
+% accumulator has more than 1 sentence (and is a member)
+cadvs(X, L) :-
+    length(L,Y),
+    Y > 0,
+    member(and, X),
+    adverb([A]),
+    nonmember(A, X),
+    append([A], [','], X2),
+    append(X2, X, X3),
+    cadvs(X3, L).
+*/
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 3c              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+/*
+verb_phrase_better(VPB) :-
+   improves on verb_phrase/1 by taking adverbs into account
+*/
+
+verb_phrase_better(VPB) :-
+    verb(VPB).
+
+verb_phrase_better(VPB) :-
+    verb(V),
+    noun_phrase_better(NPB),
+    append(V, NPB, VPB).
+
+verb_phrase_better(VPB) :-
+    cadvs(A),
+    verb(V),
+    append(A, V, VPB).
+
+verb_phrase_better(VPB) :-
+    cadvs(A),
+    verb(V),
+    noun_phrase_better(NPB),
+    append(V, NPB, VP),
+    append(A, VP, VPB).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 3d              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+/*
+sentence_better(SB) :-
+   improves on sentence/1 to include noun_phrase_better/1
+   and verb_phrase_better/1
+*/
+
+sentence_better(SB) :-
+    noun_phrase_better(NPB),
+    verb_phrase_better(VPB),
+    append(NPB, VPB, SB).
+

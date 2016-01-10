@@ -51,6 +51,9 @@ optCourse(app, 'Apparition', wt).
 optCourse(choir, 'Frog Choir', ff).
 optCourse(quid, 'Quidditch', mh).
 
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1               %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,8 +119,8 @@ enrolled_opt(vc, arith).
 enrolled_opt(vc, creatures).
 
 enrolled_opt(la, arith).
-enrolled_opt(la, muggle).
-enrolled_opt(la, creatures).
+enrolled_opt(la, quid).
+enrolled_opt(la, div).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -168,3 +171,145 @@ taughtBy(SN, TN) :-
     enrolled(SID, SCN),
     teaches(TN, SCN).
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 6               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+/*
+takesOption(?SN, ?CN) :-
+   the student with name SN is enrolled on the optional course
+   with name CN
+*/
+
+takesOption(SN, CN) :-
+    student(SID, SN, _),
+    optCourse(SCN, CN, _),
+    enrolled_opt(SID, SCN).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 7               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+/*
+takesAllOptions(?SN, ?OptCourses) :-
+   OptCourses is the list of optional courses (in alphabetical
+   order) that the student with name SN has chosen
+*/
+
+takesAllOptions(SN, OptCourses) :-
+    setof(CN, takesOption(SN, CN), OptCourses).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 8               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+/*
+studentsInHouse(?House, ?Students) :-
+   Students is a list of SN which are in House, ordered
+   alphabetically by SID
+
+   get a set of IDs first, then findall names that are a member
+   of the list of IDs (Students will then be ordered by name)
+*/
+
+studentsInHouse(House, Students) :-
+    setof(SID, SN^student(SID, SN, House), StudentIDs),
+    findall(SN, (member(SID, StudentIDs), student(SID, SN, House)), Students).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 9               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+/*
+studentsOnCourse(?SCN, ?CN, ?StudentsByHouse) :-
+   for a course with short name SCN and name CN,
+   StudentsByHouse is a list of 4 elements of the form
+   House-Students, where Students is listed by name
+
+
+HELPER PREDICATE:
+
+enrolledHouse(House, SCN, List) :-
+   List is a list of the names of students in House, enrolled
+   on the course with short name SCN
+*/
+
+studentsOnCourse(SCN, CN, [gryffindor-GryffindorList, hufflepuff-
+HufflepuffList, ravenclaw-RavenclawList, slytherin-SlytherinList]) :-
+   (compCourse(SCN, CN, _); optCourse(SCN, CN, _)),
+   enrolledHouse(gryffindor, SCN, GryffindorList),
+   enrolledHouse(ravenclaw, SCN, RavenclawList),
+   enrolledHouse(hufflepuff, SCN, HufflepuffList),
+   enrolledHouse(slytherin, SCN, SlytherinList).
+
+enrolledHouse(House, SCN, List) :-
+   findall(SN, (student(SID, SN, House), enrolled(SID, SCN)), List).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 10              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+/*
+sharedCourse(?SN1, ?SN2, ?CN) :-
+   optional course with name CN is taken by two different
+   students with names SN1 and SN2
+*/
+
+sharedCourse(SN1, SN2, CN) :-
+    takesOption(SN1, CN),
+    takesOption(SN2, CN),
+    SN1 \= SN2.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 11              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+/*
+sameOptions(?SN1, ?SN2, ?Courses) :-
+   two different students with names SN1 and SN2 are
+   enrolled on exactly the same three courses forming
+   the list Courses
+
+   if the student is Hermione, she has the same courses
+   as another student if 3 out of her 6 courses match
+
+   (can probably be more concise)
+
+
+HELPER PREDICATE:
+
+checkCourses(List1, List2) :-
+   checks if all elements of List1 are elements of List2
+*/
+
+sameOptions(SN1, SN2, Courses) :-
+    (student(_, SN1, _), student(_, SN2, _)),
+    (SN1 \= 'Hermione Jean Granger', SN2 \= 'Hermione Jean Granger'),
+    SN1 \= SN2,
+    takesAllOptions(SN1, Courses),
+    takesAllOptions(SN2, Courses2),
+    checkCourses(Courses, Courses2).
+
+sameOptions(SN1, SN2, Courses) :-
+    (student(_, SN1, _), student(_, SN2, _)),
+    SN1 \= SN2,
+    ((SN1 = 'Hermione Jean Granger',
+    takesAllOptions(SN2, Courses),
+    takesAllOptions(SN1, Courses2),
+    checkCourses(Courses, Courses2));
+    (SN2 = 'Hermione Jean Granger', 
+    takesAllOptions(SN1, Courses),
+    takesAllOptions(SN2, Courses2),
+    checkCourses(Courses, Courses2))).
+
+checkCourses([], []).
+checkCourses([], [_|_]).
+checkCourses([H|T], List) :-
+    member(H, List),
+    checkCourses(T, List).

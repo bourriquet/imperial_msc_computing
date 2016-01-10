@@ -1,7 +1,7 @@
 # lexicon
 
-Second assessed coursework for Logic and AI Programming course
-(December 2015)
+Second assessed coursework (December 2015) for the Prolog component of
+Integrated Programming Laboratory
 
 All predicates tested using SICStus 4.3.2
 

@@ -7,4 +7,4 @@ Imperial College London
 ---
 
 #### prolog
-Prolog exercises, tutorials, past exams and other resources for the Prolog component of the Integrated Programming Laboratory
+Prolog exercises, tutorials, past exams and other resources for the Prolog component of the Integrated Programming Laboratory course

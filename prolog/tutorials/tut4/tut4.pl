@@ -56,6 +56,11 @@ sentence(S) :-
 % QUESTION 2a,b      %
 %%%%%%%%%%%%%%%%%%%%%%
 
+/*
+could also consider whether the noun starts with a vowel or
+a consonant i.e. whether the article should be 'a' or 'an'
+*/
+
 better_article([a],s).
 better_article([an],p).
 better_article([the],s).

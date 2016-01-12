@@ -6,5 +6,5 @@ Imperial College London
 
 ---
 
-#### prolog
+#### [prolog](prolog)
 Prolog exercises, tutorials, past exams and other resources for the Prolog component of the Integrated Programming Laboratory course

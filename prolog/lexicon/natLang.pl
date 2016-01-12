@@ -162,6 +162,8 @@ checkReps(List) :-
 
 
 /*
+% ACCUMULATOR VERSION
+
 cadvs(L) :-
     cadvs([], L).
 

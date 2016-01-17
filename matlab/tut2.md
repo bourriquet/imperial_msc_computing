@@ -105,3 +105,14 @@ _Plot a scattergraph_:
 ```matlab
 plot(S.steps, S.act)
 ```
+
+### 5)
+
+_Load an image and view it_:
+
+```matlab
+X = imread('image.jpg')
+image(X)
+```
+
+Requires a toolbox for rest of question.

@@ -4,8 +4,8 @@ Tutorials for _518 Introduction to Matlab_.
 
 All tutorial answers were tested on _MATLAB R2015b_.
 
-[files](files)
+#### [files](files)
 - Files provided for tut2.
 
-[lifelogging](lifelogging)
+#### [lifelogging](lifelogging)
 - Solutions to tut2 Q4.

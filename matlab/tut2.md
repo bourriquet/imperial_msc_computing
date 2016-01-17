@@ -94,7 +94,7 @@ lifelogging.mean_scores(users,scores)
 
 _Create a struct array_:
 
-(Found in +lifelogging/summarise_data.m... currently does not take into account different users in A and B)
+(Found in +lifelogging/summarise_data.m... currently does not take into account different user_ids in A and B)
 
 ```matlab
  S = lifelogging.summarise_data(A,B)

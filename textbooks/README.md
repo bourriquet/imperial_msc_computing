@@ -13,7 +13,7 @@
 
 ### 528 Concurrency: Models and Programming
 
-Owned:
+__Owned:__
 
 Concurrency: State Models and Java Programs (1st edition) * 
 

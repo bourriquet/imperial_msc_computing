@@ -1,4 +1,4 @@
-# list
+# listpractice
 
 Past exam (?) found for Prolog list manipulation, used as preparation for the Prolog component of _550 Integrated Programming Laboratory_.
 

@@ -1,4 +1,5 @@
 # tutorials
 
-These Prolog tutorials formed part of the Logic and AI Programming
-course 2015/16
+These Prolog tutorials formed part of the _518 Logic and AI Programming_ 2015/16.
+
+All predicates tested using SICStus 4.3.2.

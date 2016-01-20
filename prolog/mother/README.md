@@ -1,6 +1,5 @@
 # mother
 
-Mock exam (December 2015) for Prolog component of Integrated
-Programming Laboratory
+Mock exam (December 2015) for Prolog component of _550 Integrated Programming Laboratory_.
 
-All predicates tested using SICStus 4.3.2
+All predicates tested using SICStus 4.3.2.

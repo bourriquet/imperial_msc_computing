@@ -11,9 +11,15 @@
 - Derivatives: The Tools that Changed Finance
 - [Dynamic Asset Pricing Theory](http://lib.cufe.edu.cn/upload_files/file/20140522/3_20140522_9-Dynamic%20Asset%20Pricing%20Theory(Duffie).pdf)
 
+### 501 Computer Architecture
+
+- [Structured Computer Architecture (6th edition)](https://drive.google.com/folderview?id=0Bz4ufejhsX9mbDJpeDBaZlY3WVk&usp=sharing&tid=0Bz4ufejhsX9mWktNdWhCby00LWM) * (hard copy: 4th edition)
+- [Computer Organisation and Architecture (9th edition)](https://drive.google.com/folderview?id=0Bz4ufejhsX9mbDJpeDBaZlY3WVk&usp=sharing&tid=0Bz4ufejhsX9mWktNdWhCby00LWM) * (hard copy: 8th edition)
+- 
+
 ### 528 Concurrency: Models and Programming
 
-__Owned:__
+__Hard copy:__
 
 Concurrency: State Models and Java Programs (1st edition) * 
 

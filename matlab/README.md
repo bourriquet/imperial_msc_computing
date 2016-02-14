@@ -12,6 +12,8 @@ All tutorial answers were tested on _MATLAB R2015b_.
 #### [lifelogging](lifelogging)
 - Solutions to tut2 Q4.
 
+#### [other_resources](other_resources)
+- Other resources that for learning MATLAB.
 ---
 
 __Current issues__:

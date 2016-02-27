@@ -1,6 +1,6 @@
 # prolog
 
-Material used as preparation for the Prolog exam
+Material used as preparation for the Prolog exam.
 
 ---
 

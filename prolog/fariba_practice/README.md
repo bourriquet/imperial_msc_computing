@@ -1,8 +1,6 @@
 # fariba_practice
 
-Practice questions sent by Fariba in preparation for the Prolog component of _550 Integrated Programming Laboratory_.
-
-All predicates tested on SICStus 4.3.2.
+Practice questions sent by Fariba in preparation for the Prolog component of _550 Integrated Programming Laboratory_. All predicates tested on __SICStus 4.3.2__.
 
 ---
 

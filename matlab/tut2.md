@@ -6,7 +6,7 @@
 
 _Save Q10 from tut1 in a .m file and call it_:
 
-(Found in plotsine.m)
+(Found in [plotsine.m](tut2_solution_files/plotsine.m))
 
 ```matlab
 plotsine

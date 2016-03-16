@@ -68,8 +68,7 @@ def AppendString(filename, aString):
 #                                                                                                       
 # These functions turn images into data sets and vice versa                                             
 #                                                                                                       
-# Function to turn a principal component into an image and save it. The assumed resolution os 92 by 112\
- pixels.                                                                                                
+# Function to turn a principal component into an image and save it. The assumed resolution os 92 by 112 pixels.                                                                                                
 # The component is a one dimensional representation of an image with each row concatinated              
 def SaveEigenface(component,filename):
     theMax = max(component)
@@ -82,8 +81,7 @@ def SaveEigenface(component,filename):
             im.putpixel((x,y),eigenfaceImage[x+92*y])
     im.save(filename)
 #                                                                                                       
-# Function to convert images into a data format equivalent to the above format where each row of an arr\
-ay is                                                                                                   
+# Function to convert images into a data format equivalent to the above format where each row of an array is                                                                                                   
 # one image with rows concatinated into a single vector.                                                
 # The images for this project are assumed to be all of resolution 92 by 112 pixels and are taken from   
 # the current directory in .pgm format                                                                  

@@ -1,6 +1,6 @@
 # prolog
 
-Material used for preparation for the Prolog component of _550 Integrated Programming Laboratory_.
+Material used as preparation for the Prolog component of _550 Integrated Programming Laboratory_.
 
 ---
 

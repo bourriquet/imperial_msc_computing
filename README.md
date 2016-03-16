@@ -6,6 +6,10 @@ Imperial College London.
 
 ---
 
+#### [idapi](idapi)
+
+- Coursework for _493 Intelligent Data Analysis and Probabilistic Inference_ (Python).
+
 #### [matlab](matlab)
 
 - Tutorials for _535 Introduction to MATLAB_.

@@ -1,0 +1,13 @@
+Coursework Three Results by lc3311
+
+The MDL size of the network for the Hepatitis C data set
+3972.430238
+
+The MDL accuracy of the network for the Hepatitis C data set
+-23672.1810271
+
+The MDL score of the network for the Hepatitis C data set
+27644.6112651
+
+The minimum MDL score of the network by removing one arc
+25916.7016818

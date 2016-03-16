@@ -1,0 +1,21 @@
+Order of the Variables in the hepatitis data set:
+
+Alcohol Consumption (9)
+Viral Genotype (9)
+Host Gender (2)
+Route of Infection (10)
+Age at Infection (9)
+Duration of Infection (7)
+Host Genotype (12)
+Viral Load (6)
+Study Group (2)
+
+
+Order of the Variables in the neurone data set:
+
+Neurone Type (4)
+Sholl Coefficient (8)
+Fractal Dimension (8)
+Profile Count (6)
+Total Length (6)
+Moment (6)

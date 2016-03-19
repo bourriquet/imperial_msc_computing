@@ -1,0 +1,10 @@
+/*
+Tutorial 2, Q 2.4
+*/
+
+range L = 0..9
+
+SENSOR = (level[i:L] -> LEVEL[i]),
+LEVEL[i:L] = (when (i < 2) low -> SENSOR
+			| when (i >= 2 && i <= 8) normal -> SENSOR
+			| when (i > 8) high -> SENSOR).

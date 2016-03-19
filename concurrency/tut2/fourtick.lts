@@ -1,0 +1,6 @@
+/*
+Tutorial 2, Q 2.1.v
+*/
+
+FOURTICK = TICK[0],
+TICK[i:0..4] = (when (i<4) tick -> TICK[i+1]).

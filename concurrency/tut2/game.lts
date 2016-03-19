@@ -1,0 +1,6 @@
+/*
+Tutorial 2, Q 2.1.iii
+*/
+
+GAME = ({one,two} -> win -> GAME
+		| three -> lose -> GAME).

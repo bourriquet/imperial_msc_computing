@@ -17,7 +17,6 @@ Imperial College London.
 #### [matlab](matlab)
 
 - Tutorials for _535 Introduction to MATLAB_.
-- Links to other resources that could be used to learn MATLAB.
 
 #### [prolog](prolog)
 

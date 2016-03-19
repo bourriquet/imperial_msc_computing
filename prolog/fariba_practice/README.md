@@ -1,8 +1,10 @@
 # fariba_practice
 
-Practice questions sent by Fariba in preparation for the Prolog component of _550 Integrated Programming Laboratory_. All predicates tested on _SICStus 4.3.2_.
+Practice questions sent by Fariba in preparation for the Prolog component of _550 Integrated Programming Laboratory_ ([specification](spec.pdf)). 
 
----
+__Deliverables:__ [practice.pl](practice.pl)
+
+All predicates tested on _SICStus 4.3.2_.
 
 ### 1) subList(L1, L2).
 

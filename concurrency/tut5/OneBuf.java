@@ -15,9 +15,9 @@ class OneBuf {
       }
       catch (InterruptedException e) {
       }
-      slot = o;
-      notify();
     }
+    slot = o;
+    notify();
   }
   
   // get an object from the bounded buffer
@@ -29,10 +29,10 @@ class OneBuf {
       }
       catch (InterruptedException e) {
       }
-      Object o = slot;
-      slot = null;
-      notify();
-      return o;
     }
+    Object o = slot;
+    slot = null;
+    notify();
+    return o;
   }
 }

@@ -2,8 +2,6 @@
 
 Material used as preparation for the Prolog exam of _550 Integrated Programming Laboratory_, taught in _518 Logic and AI Programming_.
 
----
-
 ### Mock/Past Exams
 
 - [mother](mother) - mock exam 2015/16.

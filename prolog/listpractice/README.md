@@ -1,6 +1,8 @@
 # listpractice
 
-Past exam (?) found for Prolog list manipulation, used as preparation for the Prolog component of _550 Integrated Programming Laboratory_. All predicates tested using _SICStus 4.3.2_.
+Past exam (?) used as practice for the Prolog component of _550 Integrated Programming Laboratory_ ([specification](spec.pdf)).
+
+All predicates tested using _SICStus 4.3.2_.
 
 ### i) remove_item(E, L, NewL).
 

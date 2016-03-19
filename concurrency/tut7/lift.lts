@@ -1,0 +1,10 @@
+/*
+Tutorial 7, Q 7.2
+*/
+
+const N = 10
+
+property LIFT_CONTROL = LIFT[0],
+LIFT[i:0..10] = (enter -> LIFT[i+1]
+				| when (i > 0) exit -> LIFT[i-1]
+				| when (i == 0)  exit -> LIFT[0]).

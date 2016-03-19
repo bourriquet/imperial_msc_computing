@@ -1,0 +1,15 @@
+/*
+Tutorial 3, Q 3.5
+*/
+
+const M = 3
+range T = 0..M
+
+TURNSTILE = (passenger -> TURNSTILE).
+CAR = (depart -> CAR).
+
+CONTROL = PLATFORM[0],
+PLATFORM[i:T] = (when (i == M) depart -> PLATFORM [0]
+				| when (i < M) passenger -> PLATFORM[i+1]).
+
+|| ROLLERCOASTER = (TURNSTILE || CONTROL || CAR).

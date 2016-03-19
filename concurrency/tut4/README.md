@@ -2,7 +2,7 @@
 
 Fourth tutorial (February 2016) for _528 Concurrency: Models and Programming_ ([specification](spec.pdf)).
 
-LTS tested using _LTSA 3.0_.
+FSP tested using _LTSA 3.0_.
 
 #### Q 4.1
 

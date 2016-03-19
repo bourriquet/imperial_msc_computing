@@ -1,11 +1,9 @@
 # tut2
 
-LTS files for the second tutorial of _528 Concurrency: Models and Programming_ ([specification](spec.pdf)).
+Second tutorial (January 2016) for _528 Concurrency: Models and Programming_ ([specification](spec.pdf)).
 
 __Current issues__:
 - Q 2.7 not completed
-
----
 
 #### Q 2.1
 

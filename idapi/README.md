@@ -2,6 +2,8 @@
 
 Coursework for _493 Intelligent Data Analysis and Probabilistic Inference_ ([specification](spec.pdf)).
 
+All code tested using _Python 2.7.6_ and _Numpy 1.8.2_.
+
 #### Coursework 1 (February 2016)
 
 - __Deliverables:__ [IDAPICoursework01.py](IDAPICoursework01.py), [IDAPIResults01.txt](IDAPIResults01.txt)

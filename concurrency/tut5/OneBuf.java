@@ -1,3 +1,7 @@
+/*
+Tutorial 5, Q 5.1
+*/
+
 class OneBuf {
 
   Object slot = null;

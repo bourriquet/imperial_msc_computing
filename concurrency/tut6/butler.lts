@@ -1,0 +1,17 @@
+/*
+Tutorial 6, Q 6.2
+*/
+
+BUTLER(S=4) = SEATED[0],
+SEATED[0] = (sitdown -> SEATED[1]),
+SEATED[i:1..S-1] = (sitdown -> SEATED[i+1]
+					| arise -> SEATED[i-1]),
+SEATED[S] = (arise -> SEATED[S-1]).
+
+||SITTING(N=5) = ({phil[i:0..N-1]}::BUTLER(N-1)).
+
+FORK = (get -> put -> FORK).
+
+PHIL = (sitdown -> right.get -> left.get -> eat -> left.put -> right.put -> arise -> PHIL).
+
+||DINERS(N=5) = forall[i:0..N-1] (phil[i]:PHIL || {phil[i].left, phil[((i-1)+N)%N].right}::FORK || SITTING(N)).

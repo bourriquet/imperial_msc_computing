@@ -1,13 +1,12 @@
-# idapi
+# concurrency
 
-Coursework and tutorials for _493 Intelligent Data Analysis and Probabilistic Inference_.
+Coursework and tutorials for _528 Concurrency: Models and Programming_.
 
 __Current issues__:
 
 
 ---
 
-#### Coursework 1 (February 2016)
+#### Tutorials
 
-- Deliverables: [IDAPICoursework01.py](IDAPICoursework01.py), [IDAPIResults01.txt](IDAPIResults01.txt)
-- Required files: [IDAPICourseworkLibrary.py](IDAPICourseworkLibrary.py), [Neurones.txt](Neurones.txt)
+[tut2](tut2)

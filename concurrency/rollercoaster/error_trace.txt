@@ -1,0 +1,9 @@
+Trace to property violation in car.1:COASTERCAR(2):
+	newPassenger
+	newPassenger
+	newPassenger
+	car.1.arrive
+	car.1.requestPassenger.2
+	car.2.arrive
+	car.2.requestPassenger.3
+	car.1.getPassenger.3

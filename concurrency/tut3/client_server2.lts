@@ -1,0 +1,10 @@
+/*
+Tutorial 3, Q 3.4
+*/
+
+CLIENT = (call->(wait->continue->CLIENT
+				| timeout -> CLIENT)).
+SERVER = (request->service->reply->SERVER).
+
+||CLIENT_SERVER = (a:CLIENT || b:CLIENT || SERVER)
+                 /{{a.call, b.call}/request, {a.wait,b.wait}/reply}.

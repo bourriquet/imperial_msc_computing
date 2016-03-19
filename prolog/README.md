@@ -1,32 +1,30 @@
 # prolog
 
-Material used as preparation for the Prolog component of _550 Integrated Programming Laboratory_.
+Material used as preparation for the Prolog exam of _550 Integrated Programming Laboratory_, taught in _518 Logic and AI Programming_.
 
 ---
 
-#### [hogwarts](hogwarts), [lexicon](lexicon)
-Courseworks for the Prolog component of _550 Integrated Programming Laboratory_ 2015/16.
-  
-#### [mother](mother)
-Mock exam for the Prolog component of _550 Integrated Programming Laboratory_ 2015/16.
+### Mock/Past Exams
 
-#### [tutorials](tutorials)
-Prolog tutorials for the _518 Logic and AI Programming_ module.
+- [mother](mother) - mock exam 2015/16.
+- [sales](sales) - past exam 2007/08.
+- [prison](prison) - mock exam for _276 Introduction to Prolog_.
+- [listpractice](listpractice) - looks like a past exam.
 
-#### [sales](sales)
-Past MSc Prolog exam (2007/08).
+### Assessed Coursework
 
-#### [spies](sales)
-Past MSc Prolog coursework (2013).
+- [hogwarts](hogwarts) - assessed coursework (November 2015) for _550 Integrated Programming Laboratory_.
+- [lexicon](lexicon) - assessed coursework (December 2015) for _550 Integrated Programming Laboratory_.
 
-#### [prison](prison)
-Mock exam for the 2nd year _276 Introduction to Prolog_ module.
+### Past Coursework
 
-#### [fariba_practice](fariba_practice)
-Practice questions sent by Fariba in preparation for the exam.
+- [spies](spies) - 2013.
 
-#### [listpractice](listpractice)
-Potential past exam used as practice questions on list comprehension.
+### Tutorials
 
-#### [other_resources](other_resources)
-Other resources that could have been used as preparation (but currently incomplete).
+- [tutorials](tutorials) - Prolog tutorials for _518 Logic and AI Programming_.
+
+### Other
+
+- [fariba_practice](fariba_practice) - practice questions sent by the instructor in preparation for the exam.
+- [other_resources](other_resources) - could have been used as preparation.

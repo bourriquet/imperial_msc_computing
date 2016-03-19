@@ -4,8 +4,6 @@ This repository contains tutorials, courseworks, past exams and other
 practice material for the coding aspect of MSc Computing Science (2015/16) at
 Imperial College London.
 
----
-
 #### [concurrency](concurrency)
 
 - Coursework and tutorials for _528 Concurrency: Models and Programming_ (Java and FSP).

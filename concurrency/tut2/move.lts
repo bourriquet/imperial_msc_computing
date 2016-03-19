@@ -1,0 +1,5 @@
+/*
+Tutorial 2, Q 2.1.iv
+*/
+
+MOVE = (ahead -> (left -> STOP | right -> MOVE)).

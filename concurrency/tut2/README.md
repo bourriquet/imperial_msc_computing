@@ -33,6 +33,6 @@ __Current issues__:
 
 - [drinks.lts](drinks.lts)
 
-#### Q 2.1
+#### Q 2.6
 
 - [radio.lts](radio.lts)

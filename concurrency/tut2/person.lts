@@ -1,0 +1,6 @@
+/*
+Tutorial 2, Q 2.1.vii
+*/
+
+PERSON = (weekend -> sleep -> {shop, play} -> PERSON
+		| weekday -> sleep -> work -> PERSON).

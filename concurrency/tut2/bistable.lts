@@ -1,0 +1,8 @@
+/*
+Tutorial 2, Q 2.3
+*/
+
+BISTABLE = (trigger -> [0] -> ONE
+			| trigger -> [1] -> ZERO),
+ZERO = (trigger -> [0] -> ONE),
+ONE = (trigger -> [1] -> ZERO).

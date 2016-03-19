@@ -1,0 +1,20 @@
+/*
+Tutorial 2, Q 2.6
+*/
+
+RADIO = OFF,
+OFF = (on -> TOP),
+TOP = (scan -> SCANNING
+		| reset -> TOP
+		| off -> OFF),
+SCANNING = (scan -> SCANNING
+		|lock -> TUNED
+		| reset -> TOP
+		| off -> OFF
+		| end -> BOTTOM),
+TUNED = (scan -> SCANNING
+		| reset -> TOP
+		| off -> OFF),
+BOTTOM = (scan -> BOTTOM
+		| reset -> TOP
+		| off -> OFF).

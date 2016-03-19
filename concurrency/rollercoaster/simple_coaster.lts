@@ -1,0 +1,39 @@
+/*
+PROVIDED FILE
+*/
+
+const Max  = 9
+const MCar = 4
+
+// models passenger arrival at the platform
+PASSENGERS = (newPassenger -> PASSENGERS).
+
+// limits passengers on platfrom to Max & allocates passengers to cars
+CONTROLLER        
+    = CONTROL[0][0],
+CONTROL[count:0..Max][carSize:0..MCar]  
+    = (when (count < Max) 
+            newPassenger  -> CONTROL[count+1][carSize]
+      |requestPassenger[n:1..MCar] -> CONTROL[count][n]
+      |when (carSize > 0 && count >= carSize) 
+            getPassenger[carSize] -> CONTROL[count-carSize][0] 
+      ).
+
+// the coaster car requests N passengers and departs when the
+// controller responds with getPassenger
+COASTERCAR(N=MCar) 
+    = (arrive -> requestPassenger[N] -> getPassenger[i:1..MCar] -> 
+         if (i > N) then ERROR else (depart -> COASTERCAR))
+      +{{requestPassenger,getPassenger}[1..MCar]}.
+
+// controls access to the platform
+PLATFORMACCESS = ({arrive,depart} -> PLATFORMACCESS).
+
+// system with two coaster cars with capacity two and three
+||ROLLERCOASTER
+         = (PASSENGERS 
+           || car[1..2]::(CONTROLLER || PLATFORMACCESS ) 
+           || car[1]:COASTERCAR(2) 
+           || car[2]:COASTERCAR(3)
+           )
+           /{newPassenger/car[1..2].newPassenger}.

@@ -1,0 +1,20 @@
+/*
+Tutorial 2, Q 2.5
+*/
+
+DRINKS = CREDIT[0],
+
+CREDIT[0] = (in.coin[5] -> CREDIT[5]
+			| in.coin[10] -> CREDIT[10]
+			| in.coin[20] -> CHANGE[5]),
+CREDIT[5] = (in.coin[5] -> CREDIT[10]
+			| in.coin[10] -> CHANGE[0]
+			| in.coin[20] -> CHANGE[10]),
+CREDIT[10] = (in.coin[5] -> CHANGE[0]
+			| in.coin[10] -> CHANGE[5]
+			| in.coin[20] -> CHANGE[15]),
+
+CHANGE[0] = (can -> DRINKS),
+CHANGE[5] = (can -> out.coin[5] -> DRINKS),
+CHANGE[10] = (can -> (out.coin[10] -> DRINKS | out.coin[5] -> out.coin[5] -> DRINKS)),
+CHANGE[15] = (can -> out.coin[5] -> out.coin[10] -> DRINKS).

@@ -1,8 +1,6 @@
 # tut4
 
-LTS files for the fourth tutorial of _528 Concurrency: Models and Programming_ ([specification](spec.pdf)).
-
----
+Fourth tutorial (February 2016) for _528 Concurrency: Models and Programming_ ([specification](spec.pdf)).
 
 #### Q 4.1
 

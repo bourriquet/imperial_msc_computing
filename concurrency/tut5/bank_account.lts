@@ -1,0 +1,10 @@
+/*
+Tutorial 5, Q 5.5
+*/
+
+const M = 10
+
+BANK_ACCOUNT = BALANCE[0],
+BALANCE[bal:0..M] = (when (bal > 0) withdraw[a:0..bal] -> BALANCE[bal - a]
+					| deposit[a:0..M] -> BALANCE[bal + a]),
+BALANCE[i:M + 1 .. 2 * M] = ERROR.

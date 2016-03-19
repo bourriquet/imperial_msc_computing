@@ -1,19 +1,18 @@
 # matlab
 
-Tutorials for _518 Introduction to Matlab_. All tutorial answers were tested on _MATLAB R2015b_.
+Tutorials for _518 Introduction to Matlab_, a two-day introductory course delivered in January 2016.
 
-__Current issues__:
+All answers tested on _MATLAB R2015b_.
 
-- tut2 Q4: summarise_data does not take into account differing user_ids in A and B
-- tut2 Q5: incomplete as it requires a toolbox
+### Tutorial 1
 
----
+- [Specification](tut1-spec.pdf)
+- __Deliverables__: [tut1.md](tut1.md)
 
-#### [files](files)
-- Files provided for tut2.
-
-#### [lifelogging](lifelogging)
-- Solutions to tut2 Q4.
-
-#### [other_resources](other_resources)
-- Other resources for learning MATLAB.
+### Tutorial 2
+- [Specification](tut2-spec.pdf)
+- __Deliverables__: [tut2.md](tut2.md), [lifelogging](lifelogging)
+- __Required files__: [files](files)
+- __Current issues__:
+  - Q 4: summarise_data does not take into account differing user_ids in A and B
+  - Q 5: incomplete as it requires a toolbox

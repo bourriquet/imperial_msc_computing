@@ -1,0 +1,5 @@
+/*
+Tutorial 2, Q 2.1.i
+*/
+
+MEETING = (hello -> converse -> goodbye -> STOP).

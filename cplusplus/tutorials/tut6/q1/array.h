@@ -1,3 +1,9 @@
+/*
+Tutorial 6, Q 1
+
+Header file
+*/
+
 #ifndef ARRAY
 #define ARRAY
 

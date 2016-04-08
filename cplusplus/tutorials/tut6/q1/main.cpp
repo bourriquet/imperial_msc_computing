@@ -4,6 +4,7 @@ Tutorial 6, Q 1
 Main program file
 */
 
+#include <iostream>
 #include "array.h"
 
 using namespace std;

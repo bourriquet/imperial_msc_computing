@@ -4,8 +4,6 @@ Tutorial 3, Q 1
 Main program file
 */
 
-#include <iostream>
-#include <iomanip>
 #include "temperature.h"
 
 using namespace std;

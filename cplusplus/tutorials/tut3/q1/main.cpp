@@ -8,8 +8,6 @@ Main program file
 
 using namespace std;
 
-// function definitions in temperature.cpp
-
 int main() {
 
   int lower, upper, step;

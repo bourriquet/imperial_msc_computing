@@ -1,7 +1,5 @@
 /*
 Tutorial 4, Q 1
-
-Implementation file
 */
 
 #include <iostream>

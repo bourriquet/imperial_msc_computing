@@ -6,7 +6,6 @@ Implementation file
 
 #include <iostream>
 #include <iomanip>
-
 #include "temperature.h"
 
 using namespace std;

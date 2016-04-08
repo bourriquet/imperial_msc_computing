@@ -1,3 +1,9 @@
+/*
+Tutorial 3, Q 1
+
+Header file
+*/
+
 #ifndef COMPARE
 #define COMPARE
 

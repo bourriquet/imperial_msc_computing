@@ -1,5 +1,5 @@
 /*
-Tutorial 4, Q 2
+Tutorial 4, Q 3
 */
 
 #include <iostream>

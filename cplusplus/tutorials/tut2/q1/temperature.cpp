@@ -1,3 +1,7 @@
+/*
+Tutorial 2, Q 1
+*/
+
 #include <iostream>
 #include <iomanip>
 

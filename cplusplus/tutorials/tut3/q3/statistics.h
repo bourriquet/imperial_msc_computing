@@ -1,3 +1,7 @@
+/*
+Tutorial 3, Q 3
+*/
+
 #ifndef STATISTICS_H
 #define STATISTICS_H
 

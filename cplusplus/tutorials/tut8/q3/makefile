@@ -1,2 +1,2 @@
-binary: binary.cpp
-        g++ -Wall -g binary.cpp -o binary
+gcd: gcd.cpp
+        g++ -Wall -g gcd.cpp -o gcd

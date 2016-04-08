@@ -1,5 +1,5 @@
 /*
-Tutorial 3, Q 1
+Tutorial 3, Q 1&2
 
 Implementation file
 */

@@ -1,3 +1,7 @@
+/*
+PROVIDED FILE
+*/
+
 #include <iostream>
 #include "soundex.h"
 

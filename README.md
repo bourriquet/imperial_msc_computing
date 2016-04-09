@@ -8,6 +8,12 @@ Imperial College London.
 
 - Coursework and tutorials for _528 Concurrency: Models and Programming_ (Java and FSP).
 
+#### [cplusplus](cplusplus)
+
+- Coursework for the C++ component of _550 Integrated Programming Laboratory_.
+- Mock exams and past exams used as preparation for the C++ exam of _550 Integrated Programming Laboratory_.
+- Tutorials for _516 Introduction to C++ Programming_.
+
 #### [idapi](idapi)
 
 - Coursework for _493 Intelligent Data Analysis and Probabilistic Inference_ (Python).

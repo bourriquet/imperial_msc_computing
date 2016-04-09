@@ -37,3 +37,31 @@ int substring_position(const char* string1, const char* string2) {
 
   return -1;
 }
+
+// returns true if string1 is a prefix of string2                                                                                                                                      
+bool is_prefix(const char* string1, const char* string2) {
+
+  // return false if at the end of the string (no matches)                                                                                                                             
+  if (strlen(string1) == 0)
+    return true;
+  else if ((strlen(string2) == 0) && (strlen(string1) > 0))
+    return false;
+
+  // if the characters are not equal, then string 1 is not a prefix                                                                                                                    
+  if (*string1 != *string2)
+    return false;
+
+  if (is_prefix((string1 + 1),(string2 + 1)))
+    return true;
+
+  return false;
+
+  // ITERATIVE VERSION                                                                                                                                                                 
+  /*                                                                                                                                                                                   
+  for (int i = 0; string1[i] != '\0'; i++) {                                                                                                                                           
+    if (string2[i] != string1[i])                                                                                                                                                      
+      return false;                                                                                                                                                                    
+  }                                                                                                                                                                                    
+  */
+
+}

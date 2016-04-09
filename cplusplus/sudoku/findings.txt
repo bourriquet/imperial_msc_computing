@@ -1,0 +1,70 @@
+####################################################################################################################
+
+Author: lc3311
+Last update: 01/11/2015
+
+This .txt file contains my answer to question 5 - summarising the difficulty identification process.
+
+####################################################################################################################
+
+The best way to categorise a Sudoku puzzle by its difficulty would be
+according to the 'difficulty', or complexity, of the logic methods used to solve
+it. However as my solve_board function does not make much use of
+logic, only whether a move is valid or not, the difficulty of the
+puzzle can not be identified this way. A move is considered to be
+valid if it satisfies the Boolean make_move function.
+
+Instead, I thought of the following ways the difficulty of the puzzle could be
+identified:
+- how many times the solve_board function was called (forwardly recursed)
+- how many times the solve_board function removed a digit from the
+board (backwardly recursed)
+- how many total unique - only one 'true' make_move for a cell -  valid moves there were at the start (turned out to
+be 0 in each puzzle)
+- how many total valid moves there were at each call of the function
+- how 'constrained' the puzzle is at the start
+
+I computed both how many times the function backwardly recursed and
+how constrained the puzzle was at the start to attempt to identify its
+difficulty. How well constrained the puzzle was was a direct measure
+of how many total 'valid moves' there were at the start of the puzzle.
+
+-----------------------------------------------------------------------------------------
+
+The findings were as follows...
+
+EASY
+Constrained score: 190
+Backwards recursion count: 2116
+
+MEDIUM
+Constrained score: 204
+Backwards recursion count: 15605
+
+mystery1
+Constrained score: 227
+Backwards recursion count: 421488
+
+mystery2
+Constrained score: 205
+Backwards recursion count: 11532
+
+mystery3
+Constrained score: 222
+Backwards recursion count: 14076
+
+--------------------------------------------------------------------------------------------------------
+
+Although the backwards recursion score for the 'mystery3' puzzle is
+lower than the medium puzzle, its constrained score is higher. Although the constrained
+scores of the 'mystery1' and 'mystery3' puzzles are very similar, the backwards
+recursion score for 'mystery1' is much higher. We already know that the
+'mystery2' is unsolvable from question 4.
+
+With this in mind, I would say that the 'mystery1' puzzle is the 'extremely hard'
+rating and the 'mystery3' puzzle is the 'hard' rating.
+
+However, a comparison of the logic methods used to solve the puzzle
+would give a more accurate understanding of the difficulty of the puzzle.
+
+

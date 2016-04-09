@@ -8,7 +8,8 @@ Material used as preparation for the C++ exam of _550 Integrated Programming Lab
 
 ### Assessed Coursework
 
-- [hogwarts](hogwarts) - assessed coursework (November 2015) for _550 Integrated Programming Laboratory_.
+- [sudoku](sudoku) - assessed coursework (November 2015) for _550 Integrated Programming Laboratory_.
+- [enigma](enigma) - assessed coursework (November 2015) for _550 Integrated Programming Laboratory_.
 
 ### Tutorials
 

@@ -1,4 +1,4 @@
-*                                                                                                                                                                                     
+/*                                                                                                                                                                                     
   Filename: reflector.cpp                                                                                                                                                              
   Author: lc3311                                                                                                                                                                       
   Last updated: 09/04/2016                                                                                                                                                             

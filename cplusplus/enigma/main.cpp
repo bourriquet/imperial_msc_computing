@@ -45,7 +45,7 @@ int main(int argc, char **argv) {
   for (int i = 0; inp[i] != '\0'; i++) {
     if (!isspace(inp[i])) {
       int input = static_cast<int>(inp[i] - 'A');
-      if (input < 0 || input > 25) {
+      if (input < 0 || input > ALPHABET_SIZE) {
 	cerr << "Invalid input character " << inp[i] << ". Input must be a capital letter. Exiting..." << endl;
 	return INVALID_INPUT_CHARACTER;
       }

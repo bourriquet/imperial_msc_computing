@@ -92,3 +92,178 @@ void print_maze(char **m, int height, int width) {
     cout << endl;
   }
 }
+
+bool find_marker(char ch, char** maze, int height, int width, int& row, int& column) {
+  for (int i = 0; i < height; i++) {
+    for (int j = 0; j < width; j++) {
+      if (maze[i][j] == ch) {
+        row = i;
+        column = j;
+        return true;
+      }
+    }
+  }
+  row = -1;
+  column = -1;
+  return false;
+}
+
+char next_pos(int& row, int& col, char dir, char** maze, int height, int width) {
+
+  switch(dir) {
+  case 'N':
+    row--;
+    break;
+  case 'S':
+    row++;
+    break;
+  case 'E':
+    col++;
+    break;
+  case 'W':
+    col--;
+    break;
+  }
+  if (!valid_move(maze, row, col, height, width))
+    return '.';
+
+  return maze[row][col];
+
+}
+
+bool valid_solution(const char* path, char** maze, int height, int width) {
+
+  int row = 0;
+  int col = 0;
+
+  find_marker('>', maze, height, width, row, col);
+
+  for (unsigned int i = 0; i < strlen(path); i++) {
+    if (next_pos(row, col, path[i], maze, height, width) == '.')
+      return false;
+
+    if ((maze[row][col] == ' ') && (path[i+1] == '\0'))
+      return false;
+
+    if ((maze[row][col] == 'X') && (path[i+1] != '\0'))
+      return false;
+  }
+  return true;
+}
+
+std::string find_path(char** maze, int height, int width, char start, char end) {
+
+  int row = 0;
+  int col = 0;
+
+  int max_path = height * width;
+  char path[max_path];
+  char pos;
+  strcpy(path, "");
+
+  find_marker(start, maze, height, width, row, col);
+  pos = maze[row][col];
+
+  if (!find_marker(start,maze, height, width, row, col))
+    return "can't find start";
+
+  if (!free_path(maze, pos, row, col, 0, start, end, path, height, width))
+    return "no solution";
+
+  string solution = path;
+
+  return solution;
+
+}
+
+const char* free_directions(char** maze, int row, int col, int height, int width) {
+
+  char dir[4];
+  strcpy(dir, "");
+
+  if (valid_move(maze, row-1, col, height, width))
+    strcat(dir, "N");
+
+  if (valid_move(maze, row+1, col, height, width))
+    strcat(dir, "S");
+
+  if (valid_move(maze, row, col-1, height, width))
+    strcat(dir, "W");
+
+  if (valid_move(maze, row, col+1, height, width))
+    strcat(dir, "E");
+
+  const char* str = dir;
+
+  return str;
+}
+
+bool free_path(char** maze, char pos, int row, int col, int length, char start, char end\
+, char* path, int height, int width) {
+
+  // found the end position                                                              
+  if (pos == end) {
+    path[length] = '\0';
+    return true;
+  }
+
+  char dir[4];
+  strcpy(dir, free_directions(maze, row, col, height, width));
+
+  if (strcmp(dir, "") == 0) {
+
+    // tried everything                                                                  
+    if (pos == start || strcmp(path, "") == 0)
+      return false;
+
+    // been there                                                                        
+    maze[row][col] = '.';
+
+    // go back one                                                                       
+    pos = next_pos(row, col, opposite(path[length-1]), maze, height, width);
+
+    // edit path                                                                         
+    path[length-1] = '\0';
+    length--;
+    return free_path(maze, pos, row, col, length, start, end, path, height, width);
+
+  }
+
+  if (maze[row][col] == ' ')
+    maze[row][col] = '#';
+
+  pos = next_pos(row, col, dir[0], maze, height, width);
+
+  path[length] = dir[0];
+  length++;
+
+  return free_path(maze, pos, row, col, length, start, end, path, height, width);
+
+}
+
+bool valid_move(char** maze, int row, int col, int height, int width) {
+
+  if ((row < 0) || (row > height) || (col < 0) || (col > width)) {
+    return false;
+  }
+  if ((maze[row][col] != ' ') && (maze[row][col] != 'X'))
+    return false;
+
+  return true;
+
+}
+
+char opposite(char dir) {
+
+  if (dir == 'N')
+    return 'S';
+  else if (dir == 'E')
+    return 'W';
+  else if (dir == 'W')
+    return 'E';
+  else if (dir == 'S')
+    return 'N';
+
+  return 'x';
+
+}

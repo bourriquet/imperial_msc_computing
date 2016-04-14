@@ -7,3 +7,6 @@ Past exam (2010) for the C++ component of _550 Integrated Programming Laboratory
 - __Skeleton files:__ [maze_skeleton.cpp](maze_skeleton.cpp), [maze_skeleton.h](maze_skeleton.h)
 
 Compiled using _g++ 4.8.4_.
+
+**Current issues**:
+  - Bonus Challenge not fully answered

@@ -129,3 +129,4 @@ Direction string_to_direction(const char *token) {
       return (Direction) n;
   }
   return INVALID_DIRECTION;
+}

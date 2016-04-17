@@ -1,0 +1,9 @@
+* Circle Line
+- Central Line
+# Piccadilly Line
+& Victoria Line
+$ Bakerloo Line
++ Jubilee Line
+| Northern Line
+> District Line
+< Hammersmith & City Line

@@ -22,6 +22,10 @@ Imperial College London.
 
 - Tutorials for _535 Introduction to MATLAB_.
 
+#### [oodp](oodp)
+
+- Tutorials for _517 Object-Oriented Design & Programming_.
+
 #### [prolog](prolog)
 
 - Coursework for the Prolog component of _550 Integrated Programming Laboratory_.

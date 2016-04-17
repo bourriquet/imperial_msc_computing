@@ -12,7 +12,7 @@ Material used as preparation for the C++ exam of _550 Integrated Programming Lab
 ### Mock Exams
 
 - [multitap](multitap) - mock exam 2015/16.
-- [braille](braille), [correct](correct), [piglatin](piglatin), [soundex](soundex), [substring](substring), [words](words)
+- [braille](braille), [correct](correct), [piglatin](piglatin), [soundex](soundex), [substring](substring), [words](words) - provided as "practice exams".
 
 ### Assessed Coursework
 

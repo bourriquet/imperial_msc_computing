@@ -1,0 +1,53 @@
+A Paddington
+B Edgware Road (Circle Line)
+C Baker Street
+D Great Portland Street
+E Euston/Euston Square
+F Kings Cross
+G Farringdon
+H Barbican
+I Moorgate
+J Liverpool Street
+K Aldgate
+L Tower Hill
+M Monument
+N Cannon Street
+O Blackfriars
+P Temple
+Q Embankment
+R Westminster
+S St James Park
+T Victoria
+U Sloane Square
+V South Kensington
+W Gloucester Rd
+X High St Kensington
+Y Notting Hill Gate
+Z Bayswater
+0 Queensway
+1 Lancaster Gate
+2 Marble Arch
+3 Bond Street
+4 Oxford Circus
+5 Tottenham Court Road
+6 Holborn
+7 Chancery Lane
+8 St Pauls
+9 Bank
+a Knightsbridge
+b Hyde Park Corner
+c Green Park
+d Piccadilly Circus
+e Leicester Square
+f Covent Garden
+g Russell Square
+h Warren Street
+i Charring Cross
+j Regents Park
+k Old Street
+l Angel
+m Goodge Street
+n Southwark
+o London Bridge
+p Marylebone
+q Edgware Road (Bakerloo Line)

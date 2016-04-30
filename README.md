@@ -14,6 +14,10 @@ Imperial College London.
 - Mock exams and past exams used as preparation for the C++ exam of _550 Integrated Programming Laboratory_.
 - Tutorials for _516 Introduction to C++ Programming_.
 
+#### [databases](databases)
+
+- PostgreSQL coursework for _528 Databases_.
+
 #### [idapi](idapi)
 
 - Coursework for _493 Intelligent Data Analysis and Probabilistic Inference_ (Python).
